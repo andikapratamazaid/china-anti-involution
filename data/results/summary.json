@@ -1,0 +1,41 @@
+{
+  "meituan_clc_peak_q1_2025_rmb_mn": 13491.0,
+  "meituan_clc_trough_q3_2025_rmb_mn": -14071.0,
+  "meituan_clc_swing_rmb_mn": -27562.0,
+  "meituan_fy2025_net_income_sum_of_quarters_rmb_mn": -23354.0,
+  "jd_new_businesses_trough_rmb_mn": -15736.0,
+  "jd_new_businesses_trough_quarter": "Q3 2025",
+  "alibaba_sm_pct_peak": 26.84,
+  "alibaba_sm_pct_peak_quarter": "Q3 2025",
+  "alibaba_ecom_ebita_q3_2025_rmb_mn": 10497.0,
+  "alibaba_ecom_ebita_q3_2026_rmb_mn": 38851.0,
+  "combined_sm_expense_by_quarter_rmb_mn": {
+    "Q1 2025": 95323.7,
+    "Q1 2026": 125529.0,
+    "Q2 2025": 129569.9,
+    "Q2 2026": 122318.0,
+    "Q3 2025": 151709.9,
+    "Q3 2026": 82171.0,
+    "Q4 2024": 108164.9,
+    "Q4 2025": 163359.3
+  },
+  "event_study_most_negative_car_0_p5": {
+    "event_id": "E5",
+    "ticker": "PDD",
+    "car_pct": -12.62
+  },
+  "event_study_most_positive_car_0_p5": {
+    "event_id": "E3",
+    "ticker": "PDD",
+    "car_pct": 8.4
+  },
+  "nbs_jan_oct_2026": {
+    "total_retail_cum_bn": 41646.4,
+    "total_retail_cum_yoy_pct": 1.0,
+    "online_goods_services_cum_bn": 16981.1,
+    "online_goods_services_yoy_pct": 3.7,
+    "online_goods_cum_bn": 10727.4,
+    "online_goods_yoy_pct": 2.9,
+    "oct_total_retail_yoy_pct": 0.4
+  }
+}

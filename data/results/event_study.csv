@@ -1,0 +1,37 @@
+event_id,event_date,event_name,ticker,benchmark,day0_date,beta,est_days,car_adj_m1_p1_pct,car_mm_m1_p1_pct,car_adj_0_p5_pct,car_mm_0_p5_pct
+E1,2025-02-11,JD.com launches food delivery (JD Takeaway),BABA,KWEB,2025-02-11,,36,9.33,,7.78,
+E1,2025-02-11,JD.com launches food delivery (JD Takeaway),JD,KWEB,2025-02-11,,36,-6.22,,-11.77,
+E1,2025-02-11,JD.com launches food delivery (JD Takeaway),PDD,KWEB,2025-02-11,,36,-0.14,,2.28,
+E1,2025-02-11,JD.com launches food delivery (JD Takeaway),3690.HK,3067.HK,2025-02-11,,34,-1.85,,-0.29,
+E2,2025-05-13,First SAMR summons of food-delivery platforms,BABA,KWEB,2025-05-13,1.128,99,0.0,-1.62,-4.43,-5.79
+E2,2025-05-13,First SAMR summons of food-delivery platforms,JD,KWEB,2025-05-13,1.015,99,-1.35,-0.94,-4.7,-3.65
+E2,2025-05-13,First SAMR summons of food-delivery platforms,PDD,KWEB,2025-05-13,0.946,99,1.37,1.78,2.16,2.19
+E2,2025-05-13,First SAMR summons of food-delivery platforms,3690.HK,3067.HK,2025-05-13,0.958,94,-5.02,-3.58,-4.0,-1.52
+E3,2025-07-18,Second SAMR summons,BABA,KWEB,2025-07-18,1.225,120,1.72,1.07,0.63,-0.07
+E3,2025-07-18,Second SAMR summons,JD,KWEB,2025-07-18,0.996,120,3.29,3.86,-0.18,0.95
+E3,2025-07-18,Second SAMR summons,PDD,KWEB,2025-07-18,0.944,120,3.9,4.36,7.62,8.4
+E3,2025-07-18,Second SAMR summons,3690.HK,3067.HK,2025-07-18,0.969,120,2.23,3.32,-0.59,1.53
+E4,2025-08-01,Platforms pledge to curb irrational subsidies,BABA,KWEB,2025-08-01,1.254,120,-0.27,-0.57,-1.32,-2.02
+E4,2025-08-01,Platforms pledge to curb irrational subsidies,JD,KWEB,2025-08-01,0.965,120,-0.78,0.05,-1.09,0.57
+E4,2025-08-01,Platforms pledge to curb irrational subsidies,PDD,KWEB,2025-08-01,0.908,120,-1.15,-0.77,-0.38,0.41
+E4,2025-08-01,Platforms pledge to curb irrational subsidies,3690.HK,3067.HK,2025-08-01,0.97,120,-2.91,-2.03,-0.92,0.88
+E5,2026-01-09,Anti-monopoly committee opens food-delivery competition investigation,BABA,KWEB,2026-01-09,1.411,120,6.66,3.74,7.42,6.63
+E5,2026-01-09,Anti-monopoly committee opens food-delivery competition investigation,JD,KWEB,2026-01-09,0.985,120,-0.16,0.39,-2.04,-1.13
+E5,2026-01-09,Anti-monopoly committee opens food-delivery competition investigation,PDD,KWEB,2026-01-09,0.774,120,-7.72,-6.42,-12.43,-12.62
+E5,2026-01-09,Anti-monopoly committee opens food-delivery competition investigation,3690.HK,3067.HK,2026-01-09,0.84,120,-1.5,-0.58,-3.4,-1.82
+E6,2026-02-13,SAMR summons seven platforms on involution-style competition,BABA,KWEB,2026-02-13,1.441,120,-1.43,-0.27,-2.25,-2.87
+E6,2026-02-13,SAMR summons seven platforms on involution-style competition,JD,KWEB,2026-02-13,0.95,120,0.75,0.93,0.51,1.21
+E6,2026-02-13,SAMR summons seven platforms on involution-style competition,PDD,KWEB,2026-02-13,0.683,120,1.48,0.55,6.95,7.22
+E6,2026-02-13,SAMR summons seven platforms on involution-style competition,3690.HK,3067.HK,2026-02-13,0.793,120,-5.5,-5.33,0.21,0.99
+E7,2026-04-17,SAMR fines seven platforms RMB 3.597bn,BABA,KWEB,2026-04-17,1.245,120,2.87,2.23,2.29,3.12
+E7,2026-04-17,SAMR fines seven platforms RMB 3.597bn,JD,KWEB,2026-04-17,0.854,120,-2.49,-2.42,0.87,-0.26
+E7,2026-04-17,SAMR fines seven platforms RMB 3.597bn,PDD,KWEB,2026-04-17,0.727,120,-0.01,0.65,-1.32,-2.38
+E7,2026-04-17,SAMR fines seven platforms RMB 3.597bn,3690.HK,3067.HK,2026-04-17,0.878,120,-4.3,-4.08,-3.46,-4.21
+E8,2026-06-17,SAMR draft food-delivery subsidy rules,BABA,KWEB,2026-06-17,1.212,120,0.36,1.29,-6.37,-4.84
+E8,2026-06-17,SAMR draft food-delivery subsidy rules,JD,KWEB,2026-06-17,0.861,120,1.38,0.05,-2.83,-5.26
+E8,2026-06-17,SAMR draft food-delivery subsidy rules,PDD,KWEB,2026-06-17,0.809,120,0.43,-0.32,-1.62,-2.82
+E8,2026-06-17,SAMR draft food-delivery subsidy rules,3690.HK,3067.HK,2026-06-17,1.075,120,-4.9,-4.45,-7.58,-6.83
+E9,2026-09-20,SAMR anti-involution enforcement push,BABA,KWEB,2026-09-21,1.152,120,3.02,2.39,-3.35,-3.3
+E9,2026-09-20,SAMR anti-involution enforcement push,JD,KWEB,2026-09-21,0.876,120,-1.16,-1.08,-0.47,-1.36
+E9,2026-09-20,SAMR anti-involution enforcement push,PDD,KWEB,2026-09-21,0.992,120,-0.58,-0.39,0.17,0.48
+E9,2026-09-20,SAMR anti-involution enforcement push,3690.HK,3067.HK,2026-09-21,1.072,120,-2.4,-2.99,0.71,0.12
