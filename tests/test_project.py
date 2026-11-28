@@ -25,13 +25,9 @@ def fin():
 
 
 def test_quarters_present(fin):
-    for comp in ("Alibaba", "JD.com", "PDD Holdings"):
+    for comp in ("Alibaba", "JD.com", "PDD Holdings", "Meituan"):
         qs = set(fin[fin["company"] == comp]["calendar_quarter"])
         assert qs == set(ALL_QUARTERS), comp
-    # Meituan's Q3 2026 announcement was scheduled for 27 Nov 2026,
-    # after this build (24 Nov 2026), so its series ends at Q2 2026.
-    qs = set(fin[fin["company"] == "Meituan"]["calendar_quarter"])
-    assert qs == set(ALL_QUARTERS) - {"Q3 2026"}
 
 
 def test_every_row_has_a_source(fin):
@@ -63,6 +59,23 @@ def test_meituan_fy2025_anchor(fin):
     clc = mt.set_index("calendar_quarter")["segment_value_rmb_mn"]
     assert clc["Q1 2025"] == 13491
     assert clc["Q3 2025"] == -14071
+
+
+def test_meituan_q3_2026_anchor(fin):
+    r = fin[(fin["company"] == "Meituan")
+            & (fin["calendar_quarter"] == "Q3 2026")].iloc[0]
+    # Announcement of the Results for the Three Months Ended
+    # September 30 2026 (HKEXnews filing) - 2026-11-27. Filing figures
+    # are in RMB thousands and are rounded to the nearest RMB million.
+    assert r["revenue_rmb_mn"] == 115556
+    assert r["revenue_yoy_pct"] == 21.6
+    assert r["sm_expense_rmb_mn"] == 27023
+    assert r["operating_profit_rmb_mn"] == 2741
+    assert r["adj_ebita_rmb_mn"] == 4581  # Adjusted EBITDA, Non-IFRS
+    assert r["net_income_rmb_mn"] == 2071
+    assert r["segment_value_rmb_mn"] == 5704  # Core local commerce
+    # S&M was 23.4% of revenue, down from 35.6% in Q3 2025.
+    assert abs(r["sm_pct_of_revenue"] - 23.39) < 0.011
 
 
 def test_jd_new_businesses_anchor(fin):
@@ -140,4 +153,4 @@ def test_summary_and_outputs_exist():
         assert p.exists() and p.stat().st_size > 10000, name
     assert (ROOT / "dashboard" / "index.html").exists()
     tr = pd.read_csv(RES / "sm_tracker.csv")
-    assert len(tr) == 31  # 8+8+8 quarters + Meituan's 7
+    assert len(tr) == 32  # 8 quarters x 4 companies
