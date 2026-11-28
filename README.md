@@ -8,7 +8,7 @@ Every number in this project comes from a named source: company earnings release
 
 **1. The burn was enormous, and it peaked in late 2025.** The four companies in this study (Alibaba, JD.com, Meituan, PDD) spent a combined **RMB 540.0 billion on sales & marketing in calendar 2025**. Their combined quarterly S&M bill rose from RMB 95.3bn in Q1 2025 to RMB 163.4bn in Q4 2025, before falling back through 2026.
 
-**2. Meituan, the incumbent, bled first and worst.** Its selling & marketing intensity jumped from 17.6% of revenue in Q1 2025 to **35.6% in Q3 2025**. Core local commerce (food delivery plus quick commerce) swung from an operating **profit of RMB 13.5bn in Q1 2025 to a loss of RMB 14.1bn in Q3 2025**, a RMB 27.6bn swing in two quarters. Meituan closed 2025 with a **net loss of RMB 23.4bn for the year**, against a RMB 35.8bn profit in 2024, and returned to segment profit only in Q2 2026.
+**2. Meituan, the incumbent, bled first and worst.** Its selling & marketing intensity jumped from 17.6% of revenue in Q1 2025 to **35.6% in Q3 2025**. Core local commerce (food delivery plus quick commerce) swung from an operating **profit of RMB 13.5bn in Q1 2025 to a loss of RMB 14.1bn in Q3 2025**, a RMB 27.6bn swing in two quarters. Meituan closed 2025 with a **net loss of RMB 23.4bn for the year**, against a RMB 35.8bn profit in 2024, and returned to segment profit in Q2 2026, holding it in Q3 2026: core local commerce earned **RMB 5.7bn (7.3% margin)**, S&M intensity fell to **23.4% of revenue** from 35.6% a year earlier, revenue rose 21.6% to **RMB 115.6bn**, and adjusted net profit was **RMB 1.9bn** — a second straight profitable quarter.
 
 **3. JD.com's entry ticket was the most expensive, and it is still paying.** JD's "New businesses" segment, which contains JD Food Delivery, lost money in every quarter from Q2 2025 onward: a trough loss of **RMB 15.7bn in Q3 2025** and a cumulative operating loss of **RMB 76.5bn between Q1 2025 and Q3 2026**. Unlike Meituan and Alibaba, JD's front-line losses were still running at roughly RMB 9.6bn in Q3 2026.
 
@@ -45,7 +45,7 @@ Each event date was verified against the cited reporting before inclusion. E7 is
 ## Data honesty and limitations
 
 - **Hand transcription, with sources.** Every financial figure was transcribed from the company's own release (SEC EDGAR Form 6-K Exhibit 99.1 for Alibaba, JD and PDD; HKEXnews results announcements for Meituan). The `source` column of `financials_quarterly.csv` names the filing for every row, and `tests/test_project.py` pins the headline anchors (for example Alibaba Q3 2026 revenue of RMB 271,519M and Meituan's FY2025 loss of RMB 23,354M) so any transcription drift fails the test suite.
-- **Known gaps, left blank on purpose.** Meituan's Q3 2026 results were scheduled for release on 27 Nov 2026, after this build (24 Nov 2026), so Meituan's series ends at Q2 2026 and any "combined" Q3 2026 figure covers three companies, not four. PDD's Q3 2026 release states no revenue YoY percentage (it gives the level against the same quarter of 2025), so that cell is empty rather than back-computed.
+- **Known gaps, left blank on purpose.** PDD's Q3 2026 release states no revenue YoY percentage (it gives the level against the same quarter of 2025), so that cell is empty rather than back-computed. Meituan's Q3 2026 results, announced 27 Nov 2026, are included, so all four companies now run through Q3 2026.
 - **Segment definitions move.** Alibaba renamed and redefined its e-commerce segment twice in the sample (Taobao and Tmall Group, then Alibaba China E-commerce Group, then Alibaba E-commerce Group). Values are as originally reported in each quarter's release and are not strictly like-for-like across the renames; the Q3 2026 release, for instance, reports e-commerce EBITA growth of +243% against a restated comparative of RMB 11,336M, while the as-originally-reported Q3 2025 value in this dataset is RMB 10,497M. Meituan likewise revised its Q1-Q3 2025 revenue and S&M figures in its FY2025 announcement (an offsetting adjustment of roughly RMB 0.35-0.43bn per quarter); the revised figures are used and the originals are recorded in the notes column.
 - **The adjusted-profit column is not one metric.** For Alibaba it holds adjusted EBITA, for Meituan adjusted EBITDA, and for JD and PDD non-GAAP operating profit, because that is what each company discloses. Each row's notes say which. Cross-company comparison of that column is indicative only; the S&M tracker and GAAP lines are the like-for-like measures.
 - **JD's segment is an upper bound on food-delivery losses.** JD New businesses also contains JD Property, Jingxi and overseas businesses, so its losses overstate the pure food-delivery loss by an amount JD does not break out.
@@ -75,7 +75,7 @@ data/raw/                 cached Yahoo JSON and NBS HTML (excluded from the zip 
 charts/                   sm_pct_timeline, segment_profit_swing, event_study_car,
                           nbs_context, indexed_prices (all rendered by script 05)
 dashboard/index.html      static dashboard generated by script 06
-tests/test_project.py     11 consistency tests (anchors, recomputation, windows, coverage)
+tests/test_project.py     12 consistency tests (anchors, recomputation, windows, coverage)
 ```
 
 ## Running it
@@ -94,7 +94,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 ## Sources
 
 - Alibaba, JD.com, PDD Holdings earnings releases: SEC EDGAR, Form 6-K Exhibit 99.1 (CIK 1577552, 1549802, 1737806), quarters ended Dec 2024 to Sep 2026.
-- Meituan results announcements: HKEXnews (stock code 3690), quarters ended Dec 2024 to Jun 2026, including the FY2025 annual results announcement of 26 Mar 2026.
+- Meituan results announcements: HKEXnews (stock code 3690), quarters ended Dec 2024 to Sep 2026, including the FY2025 annual results announcement of 26 Mar 2026 and the Q3 2026 results announcement of 27 Nov 2026.
 - Prices: Yahoo Finance chart API (query1.finance.yahoo.com), tickers BABA, JD, PDD, 3690.HK, KWEB, 3067.HK.
 - Market context: National Bureau of Statistics of China, "Total Retail Sales of Consumer Goods" English press releases, stats.gov.cn, Jan-May 2024 to Jan-Oct 2026.
 - Event verification: Reuters (11 Feb 2025; 17 Apr 2026), SAMR notices and disclosures (samr.gov.cn; english.samr.gov.cn), Caixin Global (Jul 2025; Jan-Feb 2026), China Daily / Xinhua (Aug 2025), People's Daily and South China Morning Post (Jun 2026), The Paper / CCTV (Sep 2026).
